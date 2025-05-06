@@ -26,3 +26,6 @@ foreach ($lines as $line) {
         }
     }
 }
+
+echo json_encode($output);
+?>
