@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebas
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA_0PTeIBocVXEWKmpMWbV4oeknD-PPrLQ",
+    apiKey: "#",
     authDomain: "bin-buddy-4b96f.firebaseapp.com",
     projectId: "bin-buddy-4b96f",
     storageBucket: "bin-buddy-4b96f.firebasestorage.app",
