@@ -4,7 +4,7 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA_0PTeIBocVXEWKmpMWbV4oeknD-PPrLQ",
+    apiKey: "#",
     authDomain: "bin-buddy-4b96f.firebaseapp.com",
     projectId: "bin-buddy-4b96f",
     storageBucket: "bin-buddy-4b96f.firebasestorage.app",
