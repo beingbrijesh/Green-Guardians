@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis/Metropolis-Regular.woff2') format('woff2'),
+        url('../fonts/Metropolis/Metropolis-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis/Metropolis-Light.woff2') format('woff2'),
+        url('../fonts/Metropolis/Metropolis-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis/Metropolis-SemiBold.woff2') format('woff2'),
+        url('../fonts/Metropolis/Metropolis-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis/Metropolis-Bold.woff2') format('woff2'),
+        url('../fonts/Metropolis/Metropolis-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+--white-color:                  #E2E8DB;       /* stays as a neutral base */
+--primary-color:                #4CAF50;       /* Fresh green (eco, clean) */
+--primary-dark-color:           #388E3C;       /* Darker shade for buttons or accents */
+--secondary-color:              #37474F;       /* Deep charcoal-blue for contrast */
+--section-bg-color:             #f4fdf9;       /* Soft minty background for sections */
+--site-footer-bg-color:         #263238;       /* Very dark gray-blue for footer */
+--custom-btn-bg-color:          #388E3C;       /* Matches primary-dark for cohesion */
+--custom-btn-bg-hover-color:    #66BB6A;       /* Lighter green on hover */
+--dark-color:                   #1B1B1B;       /* Near black for text contrast */
+--p-color:                      #546E7A;       /* Cool muted gray-blue for paragraph text */
+--border-color:                 #E0E0E0;       /* Light neutral border color */
+
+  --body-font-family:             'Metropolis', sans-serif;
+
+  --h1-font-size:                 52px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  16px;
+  --btn-font-size:                18px;
+  --copyright-font-size:          14px;
+
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-semibold:         600;
+  --font-weight-bold:             700;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: var(--body-font-family); 
+}
+
