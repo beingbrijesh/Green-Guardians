@@ -14,3 +14,15 @@ if (empty($data)) {
     echo json_encode([]);
     exit;
 }
+$lines = explode(PHP_EOL, $data);
+$output = [];
+
+foreach ($lines as $line) {
+    $line = trim($line);
+    if (!empty($line)) {
+        $decoded = json_decode($line, true);
+        if (json_last_error() === JSON_ERROR_NONE) {
+            $output[] = $decoded;
+        }
+    }
+}
