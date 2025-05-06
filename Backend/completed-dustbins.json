@@ -1,0 +1,58 @@
+[
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:05:17.736Z"
+    },
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:10:55.009Z"
+    },
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:10:55.010Z"
+    },
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:12:43.576Z"
+    },
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:26:41.338Z"
+    },
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:26:52.503Z"
+    },
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:27:28.530Z"
+    },
+    {
+        "dustbin_id": "001",
+        "status": "Completed",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745691659.jpeg",
+        "timestamp": "2025-04-26T21:28:07.853Z"
+    }
+]
