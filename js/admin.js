@@ -23,12 +23,12 @@ loginButton.addEventListener('click', (event) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            console.log("Login successful. Redirecting to Admin Panel...");
-            window.location.href = "adminpanel.html";
-        })
+        signInWithEmailAndPassword(auth, email, password)
+    .then(function(userCredential) {
+        const user = userCredential.user;
+        console.log("Login successful. Redirecting to Admin Panel...");
+        window.location.href = "adminpanel.html";
+    })
         .catch((error) => {
             // Handle errors
             const errorCode = error.code;
