@@ -76,3 +76,10 @@
         "image": "uploads\/dustbin_1745752029.jpeg",
         "timestamp": "2025-05-06T05:12:46.032Z"
     },
+    {
+        "dustbin_id": "011",
+        "status": "Finished",
+        "color": "blue",
+        "image": "uploads\/dustbin_1745752029.jpeg",
+        "timestamp": "2025-05-06T05:19:46.227Z"
+    },
