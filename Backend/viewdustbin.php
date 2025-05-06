@@ -75,3 +75,114 @@
             </div>
         </div>
     </nav>
+    <div class="container my-5">
+        <h2 class="text-center">Registered Dustbins</h2>
+        <div id="dustbinList" class="row my-4"></div>
+
+        <div class="text-center">
+            <a href="/Bin-Buddy/Backend/dustbinqw.php" class="btn btn-primary">Register New Dustbin</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            loadDustbins();
+        });
+
+        function loadDustbins() {
+            $.get('api.php?action=list_dustbins', function(dustbins) {
+    const container = $("#dustbinList").empty();
+    dustbins.forEach(d => {
+        container.append(`
+            <div class="col-md-4">
+                <div class="card p-3 mb-4 shadow-sm">
+                    <img src="${d.image}" class="card-img-top" style="height:200px; object-fit:cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dustbin ID: ${d.id}</h5>
+                        <p><a href="${d.location}" target="_blank">View Location</a></p>
+                        <button class="btn btn-danger btn-sm mt-2" onclick="deleteDustbin('${d.id}')">Delete</button>
+                    </div>
+                </div>
+            </div>
+        `);
+    });
+}).fail(function(err) {
+    console.error("Failed to fetch dustbins:", err.responseText);
+});
+
+        }
+
+        function deleteDustbin(id) {
+            if(confirm("Are you sure you want to delete this dustbin?")) {
+                $.post('api.php?action=delete', { id: id }, function(response) {
+                    alert('Dustbin deleted successfully!');
+                    loadDustbins(); // Refresh the list
+                }).fail(function(xhr) {
+                    alert('Failed to delete dustbin.');
+                });
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12 mb-4">
+                    <img src="/Bin-Buddy/images/logo.webp" class="logo img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <h5 class="site-footer-title mb-3">Quick Links</h5>
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="/Bin-Buddy/index.html#section_2" class="footer-menu-link">Our Story</a></li>
+                        <li class="footer-menu-item"><a href="/Bin-Buddy/index.html#section_5" class="footer-menu-link">Newsroom</a></li>
+                        <li class="footer-menu-item"><a href="/Bin-Buddy/index.html#section_3" class="footer-menu-link">Works</a></li>
+                        <li class="footer-menu-item"><a href="/Bin-Buddy/index.html#section_4" class="footer-menu-link">Become a volunteer</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                    <h5 class="site-footer-title mb-3">Contact Information</h5>
+                    <p class="text-white d-flex mb-2"><i class="bi-telephone me-2"></i><a href="tel:180000XXXX" class="site-footer-link">1800-00-XXXX-XXXX</a></p>
+                    <p class="text-white d-flex"><i class="bi-envelope me-2"></i><a href="mailto:donate@binbuddy.org" class="site-footer-link">donate@binbuddy.org</a></p>
+                    <p class="text-white d-flex mt-3"><i class="bi-geo-alt me-2"></i>Ghaziabad, Uttar Pradesh, India</p>
+                    <a href="https://www.google.com/maps/place/ABESIT+GROUP+OF+INSTITUTIONS/" class="custom-btn btn mt-3">Get Direction</a>
+                </div>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <p class="copyright-text mb-0">Copyright © 2025 
+                            <a href="#">Bin Buddy</a> Org. Design: 
+                            <a href="/Bin-Buddy/index.html" target="_blank">Bin Buddy</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                        <ul class="social-icon">
+                            <li class="social-icon-item"><a href="https://twitter.com/" class="social-icon-link bi-twitter"></a></li>
+                            <li class="social-icon-item"><a href="https://facebook.com/" class="social-icon-link bi-facebook"></a></li>
+                            <li class="social-icon-item"><a href="https://instagram.com/" class="social-icon-link bi-instagram"></a></li>
+                            <li class="social-icon-item"><a href="https://linkedin.com/" class="social-icon-link bi-linkedin"></a></li>
+                            <li class="social-icon-item"><a href="https://youtube.com/" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS FILES -->
+    <script src="/Bin-Buddy/js/jquery.min.js"></script>
+    <script src="/Bin-Buddy/js/bootstrap.min.js"></script>
+    <script src="/Bin-Buddy/js/jquery.sticky.js"></script>
+    <script src="/Bin-Buddy/js/counter.js"></script>
+    <script src="/Bin-Buddy/js/custom.js"></script>
+</body>
+</html>
+
