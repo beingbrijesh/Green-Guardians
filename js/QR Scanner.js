@@ -19,6 +19,9 @@
                     qrReader.stop();
                     qrScannerModal.style.display = "none";
                 },
+                 (errorMessage) => {
+                    console.warn(`Error: ${errorMessage}`);
+                }
                
             );
         });
