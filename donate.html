@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Support our initiative by making a donation through UPI.">
+    <meta name="author" content="Bin Buddy">
+    <link rel="icon" href="images/logo.webp" sizes="16x16" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon-48x48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="favicon-96x96.png" sizes="96x96" type="image/png">
+
+    <title>Bin Buddy - Donate</title>
+
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/binbuddy.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #e8f5e9; /* Light green to match the bright green background */
+            color: #1b5e20; /* Dark green for text to ensure visibility */
+        }
+
+        
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for navbar */
+        }
+
+        .navbar-brand span {
+            color: #2e7d32; /* Darker green for branding text */
+        }
+
+        .nav-link {
+            color: #1b5e20 !important; /* Dark green for nav links */
+        }
+
+        .nav-link:hover {
+            color: #388e3c !important; /* Slightly lighter green on hover */
+        }
+
+        .donate-form-wrapper {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for better readability */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .donate-form-wrapper h2,
+        .donate-form-wrapper h5 {
+            color: #1b5e20; /* Dark green for headings */
+        }
+
+        .donate-form-wrapper p {
+            color: #2e7d32; /* Slightly lighter green for paragraphs */
+        }
+
+        .btn-outline-success {
+            color: #1b5e20;
+            border-color: #1b5e20;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #1b5e20;
+            color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color: #2e7d32;
+            border-color: #2e7d32;
+        }
+
+        .btn-primary:hover {
+            background-color: #1b5e20;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12 d-flex flex-wrap">
+                    <p class="d-flex me-4 mb-0">
+                        <i class="bi-geo-alt me-2"></i> Ghaziabad, Uttar Pradesh, India
+                    </p>
+                    <p class="d-flex mb-0">
+                        <i class="bi-envelope me-2"></i>
+                        <a href="mailto:info@binbuddy.org">info@binbuddy.org</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                    <ul class="social-icon">
+                        <li class="social-icon-item"><a href="https://twitter.com/" class="social-icon-link bi-twitter"></a></li>
+                        <li class="social-icon-item"><a href="https://facebook.com/" class="social-icon-link bi-facebook"></a></li>
+                        <li class="social-icon-item"><a href="https://instagram.com/" class="social-icon-link bi-instagram"></a></li>
+                        <li class="social-icon-item"><a href="https://linkedin.com/" class="social-icon-link bi-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.webp" class="logo img-fluid" alt="Bin Buddy Logo">
+                <span>
+                    Bin Buddy
+                    <small>Building a Green Future</small>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="donate-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8 col-12">
+                        <div class="donate-form-wrapper text-center">
+                            <h2 class="mb-4">Make a Donation</h2>
+                            <p>Your contribution helps us create a greener, cleaner future. Every rupee makes a difference!</p>
+                            <h5 class="mt-3 mb-4">Select an amount or enter a custom amount</h5>
+                            <div class="amount-buttons d-flex flex-wrap justify-content-center gap-2">
+                                <a href="upi://pay?pa=YOUR-UPI-ID&pn=YOUR-NAME&am=100&tn=Donation%20to%20Bin%20Buddy" target="_blank" class="btn btn-outline-success">₹100</a>
+                                <a href="upi://pay?pa=YOUR-UPI-ID&pn=YOUR-NAME&am=200&tn=Donation%20to%20Bin%20Buddy" target="_blank" class="btn btn-outline-success">₹200</a>
+                                <a href="upi://pay?pa=YOUR-UPI-ID&pn=YOUR-NAME&am=500&tn=Donation%20to%20Bin%20Buddy" target="_blank" class="btn btn-outline-success">₹500</a>
+                                <a href="upi://pay?pa=YOUR-UPI-ID&pn=YOUR-NAME&am=1000&tn=Donation%20to%20Bin%20Buddy" target="_blank" class="btn btn-outline-success">₹1000</a>
+                            </div>
+                            <div class="mt-4">
+                                <p>For a custom amount, click the button below:</p>
+                                <a href="upi://pay?pa=YOUR-UPI-ID&pn=YOUR-NAME" target="_blank" class="btn btn-outline-success">Donate Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12 mb-4">
+                    <img src="images/logo.webp" class="logo img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="index.html#section_2" class="footer-menu-link">Our Story</a></li>
+
+                        <li class="footer-menu-item"><a href="index.html#section_6" class="footer-menu-link">Newsroom</a></li>
+
+                        <li class="footer-menu-item"><a href="index.html#section_4" class="footer-menu-link">Works</a></li>
+
+                        <li class="footer-menu-item"><a href="index.html#section_5" class="footer-menu-link">Become a volunteer</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                    <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                    <p class="text-white d-flex mb-2">
+                        <i class="bi-telephone me-2"></i>
+
+                        <a href="tel: 1800-00-XXXX-XXXX" class="site-footer-link">
+                            1800-00-XXXX-XXXX
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <i class="bi-envelope me-2"></i>
+
+                        <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                            contact@binbuddy.org
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex mt-3">
+                        <i class="bi-geo-alt me-2"></i>
+                        Ghaziabad, Uttar Pradesh, India
+                    </p>
+
+                    <a href="https://www.google.com/maps/place/ABESIT+GROUP+OF+INSTITUTIONS/@28.6336112,77.4451105,17z/data=!4m14!1m7!3m6!1s0x390cee3d4e3485ed:0xe0fe1689b57c7d2e!2sABESIT+GROUP+OF+INSTITUTIONS!8m2!3d28.6336112!4d77.4476854!16s%2Fm%2F0121ly37!3m5!1s0x390cee3d4e3485ed:0xe0fe1689b57c7d2e!8m2!3d28.6336112!4d77.4476854!16s%2Fm%2F0121ly37?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="custom-btn btn mt-3">Get Direction</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <p class="copyright-text mb-0">Copyright © 2025 <a href="#">Bin Buddy.org</a>
+                        Design: <a href="index.html" target="_blank">Bin Buddy</a></p>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="https://twitter.com/" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://facebook.com/" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://instagram.com/" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://linkedin.com/" class="social-icon-link bi-linkedin"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/" class="social-icon-link bi-youtube"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT FILES -->
+    
+    <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/QR Scanner.js"></script>
+</body>
+
+</html>
