@@ -202,3 +202,12 @@
             </div>
         </div>
     </footer>
+    <!-- JS FILES -->
+    <script src="/Bin-Buddy/js/jquery.min.js"></script>
+    <script src="/Bin-Buddy/js/bootstrap.min.js"></script>
+    <script src="/Bin-Buddy/js/jquery.sticky.js"></script>
+    <script src="/Bin-Buddy/js/counter.js"></script>
+    <script src="/Bin-Buddy/js/custom.js"></script>
+</body>
+</html>
+
