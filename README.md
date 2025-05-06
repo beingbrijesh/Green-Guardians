@@ -3,7 +3,7 @@
 ## 📋 Project Overview
 The QR-Based Smart Bin System is a smart waste management solution designed to enable quick and efficient reporting of waste bin status through QR codes. Users can simply scan the QR code on a bin to report if it is full, damaged, or needs attention, helping authorities take faster action and maintain cleaner environments.
 
-![](https://github.com/beingbrijesh/Green-Guardians/blob/main/images/Bin-Buddy-Video.mp4)
+![HomePage](https://github.com/beingbrijesh/Green-Guardians/blob/main/images/HomePage.jpeg)
 
 ## 🧩 Features
 - **QR Code Integration**: Unique QR codes assigned to each bin for easy identification.
@@ -12,6 +12,8 @@ The QR-Based Smart Bin System is a smart waste management solution designed to e
 - **Backend Management**: Admin panel to monitor, manage, and track bin statuses.
 - **Scalable Design**: Easy to add new bins and manage multiple locations.
 - **Data Insights**: Collects reporting data for optimizing collection schedules.
+
+![HomePage](https://github.com/beingbrijesh/Green-Guardians/blob/main/images/Features.jpeg)
 
 ## ⚙️ Technology Stack
 - **Frontend**: HTML, CSS (Bootstrap), JavaScript
