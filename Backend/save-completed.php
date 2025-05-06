@@ -18,3 +18,9 @@ if ($data) {
 
     // Save updated array back to file
     file_put_contents($file, json_encode($completedDustbins, JSON_PRETTY_PRINT));
+       echo json_encode(['message' => 'Completed task saved successfully!']);
+} else {
+    http_response_code(400);
+    echo json_encode(['message' => 'Invalid data received.']);
+}
+?>
