@@ -1242,4 +1242,49 @@ strong {
     background: var(--custom-btn-bg-hover-color);
     border-color: transparent;
   }
+
+/*---------------------------------------
+  CONTACT SEARCH & DONATE & SUBCRIBE FORM              
+-----------------------------------------*/
+.contact-form .form-control {
+    background: var(--white-color);
+  }
+  
+  .search-form {
+    position: relative;
+  }
+  
+  .search-form .form-control {
+    padding-right: 50px;
+  }
+  
+  .search-form button[type="submit"] {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--p-color);
+    width: 50px;
+    padding: 12px;
+  }
+  
+  .search-form button[type="submit"]:hover {
+    background: transparent;
+    color: var(--dark-color);
+  }
+  
+  .subscribe-form {
+    background: var(--section-bg-color);
+    border-radius: var(--border-radius-small);
+    padding: 30px;
+  }
+  
+  .subscribe-form .form-control {
+    background: var(--white-color);
+  }
+  
+  .donate-form .form-control {
+    margin-bottom: 0;
+  }
+  
   
