@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dustbin Status Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 2rem;
+      border: 1px solid #dbdbdb;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #262626;
+    }
+
+    .radio-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      margin-right: 1rem;
+      font-size: 0.95rem;
+    }
+
+    video, canvas {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .camera-btn {
+      width: 100%;
+      height: 2.5rem;
+      background: #0095f6;
+      color: white;
+      font-weight: 500;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      background: #262626;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background: #60C4B0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Dustbin ID-001</h2>
+  <form id="dustbinForm">
+    <input type="hidden" name="dustbin_id" value="001">
+
+    <div class="radio-group">
+      <p><strong>Dustbin's Status:</strong></p>
+      <label><input type="radio" name="status" value="full" required> Full</label>
+      <label><input type="radio" name="status" value="damaged" required> Damaged</label>
+    </div>
+
+    <div class="radio-group">
+      <p><strong>Dustbin's Color:</strong></p>
+      <label><input type="radio" name="color" value="green" required> Green</label>
+      <label><input type="radio" name="color" value="blue" required> Blue</label>
+    </div>
+
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <button type="button" class="camera-btn" onclick="captureImage()">📸 Capture Image</button>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  const video = document.getElementById('video');
+  const canvas = document.getElementById('canvas');
+  let capturedImageData = "";
+
+  // Request access to the camera
+  async function startCamera() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+      video.srcObject = stream;
+    } catch (err) {
+      alert("Camera access is required!");
+      console.error(err);
+    }
+  }
+
+  // Capture frame from video
+  function captureImage() {
+    const context = canvas.getContext('2d');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    capturedImageData = canvas.toDataURL('image/jpeg');
+    canvas.style.display = "block";
+    video.style.display = "none";
+  }
+
+  document.getElementById("dustbinForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const status = document.querySelector('input[name="status"]:checked')?.value;
+    const color = document.querySelector('input[name="color"]:checked')?.value;
+    const dustbinId = document.querySelector('input[name="dustbin_id"]')?.value;
+
+    if (!status || !color || !capturedImageData) {
+      alert("Please select all options and capture an image.");
+      return;
+    }
+    const formData = {
+  dustbin_id: dustbinId,
+  status,
+  color,
+  image: capturedImageData
+};
+
+    try {
+      const response = await fetch("Backend/submit-dustbin.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      alert(result.message || "Submitted!");
+      document.getElementById("dustbinForm").reset();
+      canvas.style.display = "none";
+      video.style.display = "block";
+    } catch (err) {
+      alert("Error submitting form.");
+      console.error(err);
+    }
+  });
+
+  startCamera();
+</script>
+
+</body>
+</html>
