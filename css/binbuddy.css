@@ -161,3 +161,31 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+
+/*---------------------------------------
+  SECTION               
+-----------------------------------------*/
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .section-bg {
+    background-color: var(--section-bg-color);
+  }
+  
+  .section-overlay {
+    background: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .section-overlay + .container {
+    position: relative;
+  }
+  
+  
